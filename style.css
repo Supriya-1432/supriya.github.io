@@ -1,0 +1,272 @@
+
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html,body{
+  overflow-x: hidden;
+}
+
+/*for sticky nav fixed-top padding*/
+
+body::before{
+  display: block;
+  content: '';
+  height: 55px;
+}
+
+
+/*navbar styling*/
+#nav{
+  color:goldenrod;
+}
+#nav:hover{
+  color: black;
+  background-color: whitesmoke;
+}
+
+
+/*resume button glow*/
+.ahref{
+  position: relative;
+    display: inline-block;
+    text-decoration: none;
+    overflow: hidden;
+    color:#03e9f4;
+    transition: 0.5s;
+}
+.ahref:hover {
+    color: black;
+    background: #03e9f4;
+    box-shadow: 0 0 50px #03e9f4;
+}
+
+
+/*home vertical height styling*/
+.hm-small{
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/*animating name starts*/
+.sup{
+  color: #0e3742;
+  -webkit-box-reflect: below 1px linear-gradient(transparent,#0008);
+  line-height: 0.7em;
+  outline:none;
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+
+  0%{
+    color: #0e3742;
+    text-shadow: none;
+  }
+  100%{
+    color:#fff;
+    text-shadow: 0 0 1px #03e9f4;
+  }
+  
+}
+/*animating name ends*/
+
+
+/*resume button animation starts*/
+.ahref span{
+  position: absolute;
+  display: block;
+}
+
+.ahref span:nth-child(1){
+  top:0;
+  left:-100%;
+  width: 100%;
+  height:2px;
+  background: linear-gradient(90deg,transparent,#03e9f4);
+  animation: animate1 1s linear infinite;
+}
+@keyframes animate1 {
+  0%{
+    left: -100%;
+  }
+  50%,100%{
+    left: 100%;
+  }
+  
+}
+
+.ahref span:nth-child(2){
+  top:-100%;
+  right:0;
+  width: 2px;
+  height:100%;
+  background: linear-gradient(180deg,transparent,#03e9f4);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+@keyframes animate2 {
+  0%{
+    top:-100%;
+  }
+  50%,100%{
+    top:100%;
+  }
+}
+
+.ahref span:nth-child(3){
+  right: -100%;
+  bottom:0;
+  width: 100%;
+  height:2px;
+  background: linear-gradient(180deg,transparent,#03e9f4);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+@keyframes animate3{
+  0%{
+    right:-100%;
+  }
+  50%,100%{
+    right:100%;
+  }
+}
+
+.ahref span:nth-child(4){
+  bottom: -100%;
+  left:0;
+  width: 2px;
+  height:100%;
+  background: linear-gradient(360deg,transparent,#03e9f4);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+@keyframes animate4{
+  0%{
+    bottom:-100%;
+  }
+  50%,100%{
+    bottom:100%;
+  }
+}
+/*resume button animation ends*/
+
+
+/*text shadow starts*/
+
+
+#course{
+  text-shadow: 2px 2px 5px red;
+}
+
+#me{
+  text-shadow: 2px 2px 5px red;
+}
+
+#skills{
+  text-shadow: 2px 2px 5px orangered;
+}
+
+#profile{
+  text-shadow: 2px 2px 5px orangered;
+}
+
+#contact{
+  text-shadow: 2px 2px 5px lightsalmon;
+}
+/*text shadow ends*/
+
+
+/*about vertcal height styling*/
+.abouth{
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/*responsive for call emoji*/
+@media screen and (min-width:992px)
+{
+  .callimg img{
+    width: 270px;
+  }
+}
+
+
+/*responsive for hello emoji*/
+@media screen and (min-width:250px)
+{
+  .helloimg{
+    width: 200px;
+  }
+}
+
+
+/*about emoji*/
+.aboutimg{
+  width: 20%;
+}
+
+
+/*responsive for course emoji*/
+@media screen and (max-width:385px) {
+  .courseimg{
+    width: 30%;
+  }
+}
+@media screen and (min-width:385px) and (max-width:992px) {
+  .courseimg{
+    width: 20%;
+  }
+}
+@media screen and (min-width:992px) {
+  .courseimg{
+    width: 10%;
+  }
+}
+
+
+/*responsive for skills emoji*/
+@media screen and (max-width:768px) {
+  .skillsimg{
+    width: 30%;
+  }
+}
+@media screen and (min-width:768px) {
+  .skillsimg{
+    width: 10%;
+  }
+}
+
+
+/*responsive for profiles emjoi*/
+@media screen and (max-width:768px) {
+  .profilesimg{
+    width: 30%;
+  }
+}
+@media screen and (min-width:768px) {
+  .profilesimg{
+    width: 10%;
+  }
+}
+
+
+/*profiles hover effect*/
+.profileshover{
+  color: white;
+}
+
+.profileshover:hover{
+  text-transform: capitalize;
+  color: yellow;
+}
