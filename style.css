@@ -194,10 +194,10 @@ body::before{
 
 
 /*responsive for call emoji*/
-@media screen and (min-width:992px)
+@media screen and (min-width:768px)
 {
   .callimg img{
-    width: 270px;
+    width: 280px;
   }
 }
 
