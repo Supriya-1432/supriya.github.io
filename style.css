@@ -270,3 +270,32 @@ body::before{
   text-transform: capitalize;
   color: yellow;
 }
+
+/*responsive for skills icons*/
+@media screen and (max-width:430px) {
+  .skill{
+    width: 17%;
+  }
+  .skilljava{
+    width: 16%;
+  }
+}
+@media screen and (min-width:430px) and (max-width:768px) {
+  .skill{
+    width: 10%;
+  }
+  .skilljava{
+    width: 9%;
+  }
+}
+@media screen and (min-width:768px) {
+  .skill{
+    width: 5%;
+  }
+  .skilljava{
+    width: 4%;
+  }
+  .skillinline{
+    display: inline;
+  }
+}
